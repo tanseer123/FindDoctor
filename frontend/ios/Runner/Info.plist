@@ -47,5 +47,24 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+
+	<key>NSLocationWhenInUseUsageDescription</key>
+<string>This app needs access to your location to find nearby doctors.</string>
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>This app needs access to your location to find nearby doctors.</string>
+<key>io.flutter.embedded_views_preview</key>
+<true/>
+<key>CFBundleURLTypes</key>
+<array>
+  <dict>
+    <key>CFBundleTypeRole</key>
+    <string>Editor</string>
+    <key>CFBundleURLSchemes</key>
+    <array>
+      <string>com.finddoctor</string>
+    </array>
+  </dict>
+</array>
+
 </dict>
 </plist>

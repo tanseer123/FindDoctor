@@ -1,6 +1,46 @@
 import 'package:flutter/material.dart';
 
-void main() {
+// frontend/lib/main.dart
+
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'screens/home_screen.dart';
+import 'screens/doctors_screen.dart';
+import 'screens/map_screen.dart';
+//import 'package:flutter/foundation.dart'; // Use this instead of dart:developer
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: "assets/.env"); // Load environment variables
+  runApp(const MyApp());
+  
+  //runApp(const MaterialApp(home: Scaffold(body: Center(child: Text('Hello World')))));
+
+
+}
+
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'FindDoctor App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      initialRoute: '/home',
+      routes: {
+        '/home': (context) => const HomeScreen(),
+        '/doctors': (context) => const DoctorsScreen(),
+        '/map': (context) => const MapScreen(),
+      },
+    );
+  }
+}
+
+/*
+void main() { 
   runApp(const MyApp());
 }
 
@@ -123,3 +163,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+*/

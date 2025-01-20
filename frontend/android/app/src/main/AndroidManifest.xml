@@ -30,4 +30,27 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+    <!-- frontend/android/app/src/main/AndroidManifest.xml -->
+
+<application
+    android:name="io.flutter.app.FlutterApplication"
+    android:label="find_doctor_app"
+    android:icon="@mipmap/ic_launcher">
+    <!-- Add the following meta-data tag -->
+    <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyA0kqD87tHeln2PBgOVI4zhfEogfDQb_hM"/>
+    <!-- ... other configurations ... -->
+</application>
+<application ...>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA0kqD87tHeln2PBgOVI4zhfEogfDQb_hM"/>
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyA0kqD87tHeln2PBgOVI4zhfEogfDQb_hM"/>
+
+
 </manifest>
